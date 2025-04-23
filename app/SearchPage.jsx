@@ -62,10 +62,13 @@ export default function SearchPage() {
         colors={['#552583', '#301934']}
         style={styles.gradient}
       >
-        <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <ScrollView contentContainerStyle={[styles.scrollViewContent, { paddingBottom: 100 }]}>
+          <View style={styles.header}>
+            <Text style={styles.title}>Search</Text>
+          </View>
           <TextInput
             style={styles.searchBar}
-            placeholder="Search"
+            placeholder="What do you want to listen to?"
             placeholderTextColor="#888"
           />
           <FlatList
@@ -104,6 +107,17 @@ const styles = StyleSheet.create({
   },
   scrollViewContent: {
     paddingVertical: 16,
+    paddingBottom: 100,
+  },
+  header: {
+    padding: 16,
+    marginTop: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FDB927',
+    marginBottom: 16,
   },
   searchBar: {
     height: 50,

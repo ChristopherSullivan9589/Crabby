@@ -1,20 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
-import SearchPage from "./SearchPage";
+import { View, StyleSheet } from "react-native";
+import HomePage from "./home";
+
 export default function Index() {
   return (
     <View style={styles.container}>
-      <SearchPage />
+      <HomePage />
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#fff',
   },
 });
